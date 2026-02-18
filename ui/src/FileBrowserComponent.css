@@ -1,0 +1,43 @@
+ul.dirs { list-style:none; }
+
+ul.dirs li{
+  text-align: left;
+}
+
+ul.dirs li.file-entry {
+  list-style-image:url(assets/file_24.png);
+}
+
+ul.dirs li.dir-entry {
+  list-style-image:url(assets/folder_24.png);
+}
+
+.breadcrumb {
+  padding: 10px 16px;
+  list-style: none; /* Removes default list bullets */
+  background-color: #eee;
+  display: flex; /* Helps align items and separators */
+  gap: 8px; /* Adds spacing between items */
+}
+
+.breadcrumb li {
+  display: inline; /* Displays list items side by side */
+  font-size: 18px;
+}
+
+/* Add a slash or arrow symbol (/) before/behind each list item, except the first */
+.breadcrumb li + li:before {
+  padding: 8px;
+  color: black;
+  content: "/";
+}
+
+.breadcrumb li a {
+  color: #0275d8;
+  text-decoration: none;
+}
+
+.breadcrumb li a:hover {
+  color: #01447e;
+  text-decoration: underline;
+}
